@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --scania-white: #fafafa;
+  --background: #f7f7f7;
+  --black: #000;
+  --scania-black: #2d2926;
+  --scania-button: #033a6a;
+  --scania-hover: #044883;
+  --scania-blue: #041e42;
+  --scania-light-grey: #e2e2e2;
+  --scania-dark-grey: #53565a;
+  --label: #949393;
+  --border: #e2e2e2;
+  --footer: #1d1d1b;
+  --copyright: #97999b;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+}
+
+.header {
+  width: 100%;
+  /* height: 4.3rem; */
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  /* display: grid;
+  grid-template: "h1 logo" / 1fr 100px; */
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.header__img {
+  grid-area: img;
+  display: none;
+}
+
+.header__h1 {
+  width: 100vw;
+  grid-area: h1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Scania Sans Headline;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  color: var(--scania-dark-grey);
+  padding: 1.2rem 0;
+}
+
+.header__a::before {
+  position: fixed;
+  border-left: 1px solid #e2e2e2;
+  height: 60px;
+  content: "";
+  top: 0;
+  right: 65px;
+}
+
+.header__a::after {
+  content: "";
+  display: inline-block;
+  background-image: url(https://digitaldesign.scania.com/logotype/scania-symbol.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.7rem;
+  width: 40px;
+  height: 37px;
+}
+
+.main {
+  margin-top: 6rem;
+}
+
+.main__h2 {
+  color: var(--scania-blue);
+  font-family: Scania Sans Headline bold;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 1rem 0 1rem;
+}
+
+.body {
+  background-color: var(--background);
+}
+
+.container-fluid__form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder {
+  color: #c8c9c7;
+}
+
+.form__input {
+  padding: 0.5em;
+}
+
+.form__label {
+  width: 60%;
+  font-family: "Scania Sans Semi Condensed bold";
+  font-size: 1rem;
+  color: var(--label);
+  padding: 0.35rem 0;
+}
+
+.form__h3 {
+  font-family: "Scania Sans Semi Condensed bold";
+  color: var(--scania-blue);
+  padding: 1rem 0 0.5rem;
+}
+
+.footer__container {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--scania-black);
+}
+
+.footer__img {
+  transform: scale(0.2);
+}
+
+.footer__copyright {
+  font-family: "Scania Sans Semi Condensed";
+  font-size: 0.8rem;
+  color: var(--copyright);
+  text-align: center;
+  padding: 1.3rem;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+  position: relative;
+  left: 0;
+  width: 60%;
+  height: 50px;
+  border: 1px solid #fafafa;
+  border: none;
+  font-family: Scania Sans bold;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  outline: 0;
+  color: #041e42;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.btn {
+  font-family: "Scania Sans Semi Condensed bold";
+  font-size: 0.9rem;
+  padding: 0.8rem 1rem;
+  margin: 1.8em 0;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--scania-white);
+  background-color: var(--scania-button);
+}
+
+.btn-primary:hover {
+  background-color: var(--scania-hover);
+}
+
+#takID {
+  cursor: not-allowed;
+}
+
+@media (min-width: 991px) {
+  .header {
+    display: grid;
+    grid-template: ". . .";
+  }
+
+  .header__h1 {
+    position: relative;
+    left: -250px;
+    padding: 1.5rem;
+  }
+
+  .header__img {
+    display: flex;
+    height: 28px;
+    align-self: center;
+    padding: 0 1em;
+    border-right: 1px solid var(--scania-light-grey);
+  }
+
+  .header__a::before {
+    border: none;
+  }
+
+  .header__a::after {
+    width: 48px;
+    height: 46px;
+  }
+  .main__h2 {
+    font-size: 2em;
+  }
+
+  .footer__img {
+    grid-area: footer__img;
+    transform: scale(0.3);
+  }
+
+  .footer__copyright {
+    grid-area: copyright;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    display: grid;
+    grid-template: "copyright footer__img";
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 7em;
+  }
+}

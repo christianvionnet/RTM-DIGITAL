@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTM DIGITAL - Interfencias & Acción</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://static.scania.com/resources/fonts/scania-sans/scania-sans.css"
+    />
+    <link rel="icon" href="/img/scania_symbol.png" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <img
+        class="header__img"
+        src="https://digitaldesign.scania.com/logotype/scania-wordmark.svg"
+        alt=""
+      />
+      <h1 class="header__h1">RTM DIGITAL</h1>
+      <a class="header__a" href="#"></a>
+      <!-- <img
+        class="header__logo"
+        src="https://digitaldesign.scania.com/logotype/scania-symbol.svg"
+        alt=""
+      /> -->
+    </header>
+
+    <main class="main">
+      <h2 class="main__h2">INTERFERENCIAS - ACCIÓN</h2>
+      <form class="container-fluid__form" action="#" id="containerFluid">
+        <label class="form__label" for="TaktID">* Interferencia N°:</label>
+        <input
+          class="container-fluid__input"
+          name="TaktID"
+          placeholder="Ingrese n° de interfencia"
+          type="text"
+          id="taktID"
+          title="No se puede modificar"
+        />
+        <label class="form__label" for="Acción">* Acción:</label>
+        <input
+          class="container-fluid__input"
+          name="Acción"
+          placeholder="Ingrese la acción"
+          type="text"
+          id="accion"
+        />
+
+        <label class="form__label" for="Responsable">Responsable:</label>
+        <input
+          class="container-fluid__input"
+          name="Responsable"
+          placeholder="Ingrese el responsable"
+          type="text"
+          id="responsable"
+        />
+
+        <label class="form__label" for="Estado">* Estado:</label>
+
+        <select id="estado" placeholder="Seleccione estado">
+          <option value="true">Abierto</option>
+          <option value="false">Cerrado</option>
+        </select>
+
+        <label class="form__label" for="Vencimiento">Vencimiento:</label>
+        <input
+          class="container-fluid__input"
+          name="Vencimiento"
+          placeholder="Vencimiento"
+          type="datetime-local"
+          id="vencimiento"
+        />
+
+        <label class="form__label" for="Comentarios">Comentarios:</label>
+        <input
+          class="container-fluid__input"
+          name="Comentarios"
+          placeholder="Comentarios"
+          type="text"
+          id="comentarios"
+        />
+
+        <h3 class="form__h3">Los campos con * son obligatorios</h3>
+        <div class="buttons">
+          <button class="btn btn-primary" type="submit" id="submitButton">
+            CONFIRMAR
+          </button>
+          <button
+            href="#"
+            class="btn btn-secondary"
+            type="button"
+            id="deleteButton"
+          >
+            BORRAR
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <img
+          class="footer__img"
+          src="https://digitaldesign.scania.com/logotype/scania-wordmark-white.svg"
+          alt=""
+        />
+      </div>
+
+      <div class="footer__copyright">
+        © Copyright Scania 2021 All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

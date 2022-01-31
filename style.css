@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scania {
+  height: 100vh;
+}
+
+.c-main-content {
+  height: 100%;
+  display: grid;
+  grid-template:
+    "main-content__h1" 10%
+    "container-fluid" 90%;
+}
+
+.main-content__h1 {
+  grid-area: main-content__h1;
+  margin: 1em 0;
+  text-align: center !important;
+  font-size: 2em !important;
+  font-family: Scania Sans Headline bold !important;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  grid-area: container-fluid;
+}
+
+.container-fluid__form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input {
+  padding: 0.5em;
+}
+
+.form__label {
+  width: 60%;
+  font-size: 1.3em !important;
+}
+.primary-items__title {
+  font-size: 3em;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+  position: relative;
+  left: 0;
+  width: 60%;
+  height: 50px;
+  border: 1px solid #fafafa;
+  border: none;
+  font-family: Scania Sans bold;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  outline: 0;
+  color: #041e42;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder {
+  color: #c8c9c7;
+}
+
+.buttons {
+  padding: 0.9em;
+}
+
+.btn {
+  margin: 1em 0;
+}
+
+#takID {
+  cursor: not-allowed;
+}
+
+select::placeholder {
+  color: #c8c9c7;
+}
+
+option {
+  color: #000;
+}
+
+@media (max-width: 991px) {
+  c-corporate-header
+    .navbar-default.c-corporate-header
+    .navbar-header[short-name].c-corporate-header:not([short-name=""]):after {
+    display: inline-block;
+    font-size: 1.8rem;
+    vertical-align: middle;
+    content: "RTM Digital";
+  }
+
+  .main-content__h1 {
+    font-size: 1em !important;
+  }
+
+  .btn {
+    font-size: 1em !important;
+  }
+}
